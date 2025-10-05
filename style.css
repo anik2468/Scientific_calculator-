@@ -1,0 +1,87 @@
+body {
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fad390, #a1c4fd, #c2e9fb);
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.calculator {
+  background: #ffffffee;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 0 25px rgba(0,0,0,0.2);
+  width: 360px;
+  backdrop-filter: blur(10px);
+}
+
+.display {
+  width: 100%;
+  height: 65px;
+  font-size: 22px;
+  text-align: right;
+  padding: 10px;
+  border: none;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  background: #f1f1f1;
+  color: #222;
+  font-weight: bold;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+}
+
+button {
+  padding: 15px;
+  font-size: 18px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: white;
+  font-weight: bold;
+}
+
+/* Number buttons */
+button:not(.op):not(.func):not(.equal):not(.clear):not(.del) {
+  background: linear-gradient(135deg, #42e695, #3bb2b8);
+}
+
+/* Operator buttons */
+.op {
+  background: linear-gradient(135deg, #ff6a00, #ee0979);
+}
+
+/* Functions */
+.func {
+  background: linear-gradient(135deg, #4776E6, #8E54E9);
+}
+
+/* Equal button */
+.equal {
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+  grid-column: span 2;
+}
+
+/* Clear button */
+.clear {
+  background: linear-gradient(135deg, #f85032, #e73827);
+  grid-column: span 2;
+}
+
+/* Delete button */
+.del {
+  background: linear-gradient(135deg, #ffb347, #ffcc33);
+}
+
+/* Hover effect */
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
